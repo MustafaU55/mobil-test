@@ -248,6 +248,54 @@ Test ortamı seçimi projenin bütçesini ve hızını doğrudan etkiler.
 layout: default
 ---
 
+# Emülatör vs Gerçek Cihaz (Canlı Hata Tespiti)
+
+<div class="grid grid-cols-2 gap-4 mt-2">
+  <!-- ANDROID EMÜLATÖR VİDEOSU (Hatayı gizleyen) -->
+  <div class="card !p-3">
+    <h4 class="text-blue font-bold text-[0.9rem] mb-2 text-center">💻 Emülatör Görünümü</h4>
+    <div class="flex gap-3 h-[240px]">
+      <!-- Sol: Video (Dikey) -->
+      <div class="w-1/2 bg-black rounded border border-[#ddd] overflow-hidden flex justify-center items-center">
+        <video controls autoplay loop muted class="w-full h-full object-contain">
+          <source src="/android-video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <!-- Sağ: Açıklama -->
+      <div class="w-1/2 flex flex-col justify-center">
+        <p class="text-[0.65rem] leading-snug mt-1">Uygulama arayüzü, emülatörün mükemmel sanal piksellerinde <b>tamamen sorunsuz</b> çalışıyor gibi görünüyor.</p>
+        <p class="text-[0.65rem] leading-snug mt-2 text-slate-500">Tüm butonlar hizalı ve UI test otomasyonu (Appium) bu ekranda <b>"TEST PASSED"</b> sonucu verir.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- GERÇEK CİHAZ VİDEOSU (Hatayı gösteren) -->
+  <div class="card !p-3" style="border-left-color: #b32238;">
+    <h4 class="text-red font-bold text-[0.9rem] mb-2 text-center">📱 Gerçek Cihaz Görünümü</h4>
+    <div class="flex gap-3 h-[240px]">
+      <!-- Sol: Video (Dikey) -->
+      <div class="w-1/2 bg-black rounded border border-[#ddd] overflow-hidden flex justify-center items-center">
+        <video controls autoplay loop muted class="w-full h-full object-contain">
+          <source src="/ios-video.mp4" type="video/mp4"> <!-- Videonun adını gerçek cihaz videosuna göre değiştirmeyi unutma -->
+        </video>
+      </div>
+      <!-- Sağ: Açıklama -->
+      <div class="w-1/2 flex flex-col justify-center">
+        <p class="text-[0.65rem] leading-snug mt-1">Gerçek cihazın ekran çentiği (Notch) ve donanımsal kenar payları (Safe Area) nedeniyle <b>UI öğeleri üst üste biniyor.</b></p>
+        <p class="text-[0.65rem] leading-snug mt-2 font-bold text-red">Çözüm:</p>
+        <p class="text-[0.65rem] leading-snug mt-1">Bu yüzden UI (Arayüz) testleri yalnızca emülatörde bırakılamaz, mutlaka fiziksel cihazlarda doğrulanmalıdır.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-text">
+  <span>Emülatör vs Gerçek Cihaz</span>
+</div>
+---
+layout: default
+---
+
 # Yaşam Döngüsü (Lifecycle)
 Uygulama durumu işletim sistemi tarafından değiştirilir.
 

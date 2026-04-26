@@ -295,18 +295,18 @@ Uygulama durumu işletim sistemi tarafından değiştirilir.
 
 <div class="grid grid-cols-2 gap-8 mt-4">
   <div>
-    <ul class="text-[0.8rem] space-y-3">
+    <ul class="text-[0.8rem]">
       <li><b>Durum Yönetimi (State):</b> Uygulama arka plana atıldığında veriler kayboluyor mu?</li>
       <li><b>Sistem Müdahalesi (OS Kill):</b> İşletim sistemi RAM'i boşaltmak için uygulamayı acımasızca kapatır.</li>
       <li><b>Açılış Performansı:</b> 
-        <ul class="mt-1 ml-4 list-disc space-y-1">
+        <ul class="mt-1 ml-4 list-disc">
           <li><i>Cold Start:</i> Sıfırdan açılış.</li>
           <li><i>Warm Start:</i> Arkaplandan dönüş.</li>
         </ul>
       </li>
     </ul>
   </div>
-<div class="p-4 bg-gradient-to-r from-[#f9f9fc] to-[#eef1ff] rounded-xl border border-[#2e2c7d] shadow-md max-w-3xl mx-auto">
+<div class="p-4 bg-gradient-to-r from-[#f9f9fc] to-[#eef1ff] rounded-xl border border-[#2e2c7d] shadow-md max-w-2xl mx-auto">
   <p class="text-[1rem] font-bold text-center text-[#2e2c7d] mb-1 tracking-wide">
     Model Tabanlı Yaklaşım
   </p>
@@ -329,6 +329,38 @@ stateDiagram-v2
 ```
 
   </div>
+</div>
+<div class="-mt-4">
+  <p class="text-[0.7rem] font-bold text-red">Kullanıcıların Uygulamayı Silme (Uninstall) Nedenleri (Araştırma Verileri)</p>
+  
+  <table class="w-full text-center !-mb-2 border-b border-[#ddd] -mt-2">
+    <thead>
+      <tr>
+        <th class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] text-center leading-none">Hata Türü</th>
+        <th class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] text-center leading-none">Uygulamayı Silme Oranı</th>
+        <th class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] text-center leading-none">Lifecycle İle İlgisi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] leading-none">Sürekli Çökmeler (Crash)</td>
+        <td class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] font-bold text-red leading-none">%70</td>
+        <td class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] leading-none">OS Kill ve Memory taşmaları</td>
+      </tr>
+      <tr>
+        <td class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] leading-none">Arka Plandan Dönüşte Donma</td>
+        <td class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] font-bold text-red leading-none">%65</td>
+        <td class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] leading-none">Warm Start hataları</td>
+      </tr>
+      <tr>
+        <td class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] leading-none border-b-0">Oturum / Veri Kaybı</td>
+        <td class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] font-bold text-red leading-none border-b-0">%42</td>
+        <td class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] leading-none border-b-0">State yönetiminin atlanması</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="text-[0.55rem] text-slate-400 italic">*Kaynak: Localytics & Google Play Vitals Kullanıcı Davranış Analizi Raporu</p>
 </div>
 
 <div class="footer-text">

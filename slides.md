@@ -148,7 +148,6 @@ layout: default
 ---
 
 # Mobil Ekosistemin Doğası
-<p class="text-sm text-red font-bold mb-4">Grup 6: Yazılım Karmaşıklığı'na Atıfla</p>
 
 <div class="grid grid-cols-2 gap-8">
   <div>

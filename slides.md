@@ -14,7 +14,6 @@ css: unocss
 ---
 
 <style>
-/* Kurumsal Arka Plan Tasarımı */
 .slidev-layout {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 980 552'%3E%3Crect width='980' height='552' fill='%23FAF4F4'/%3E%3Cpolygon points='480,0 600,0 640,40 520,40' fill='%232e2c7d'/%3E%3Cpolygon points='640,512 760,512 720,552 600,552' fill='%23b32238'/%3E%3Cpolygon points='780,512 900,512 940,552 820,552' fill='%232e2c7d'/%3E%3Crect x='40' y='40' width='900' height='472' fill='%23FFFFFF' stroke='%23222222' stroke-width='1.5'/%3E%3Crect x='41' y='462' width='898' height='49' fill='%232e2c7d' opacity='0.25'/%3E%3C/svg%3E");
   background-size: cover;
@@ -23,24 +22,20 @@ css: unocss
   color: #1a1a1a;
 }
 
-/* Renk Paleti ve Yazı Tipleri */
 h1, h2, h3, h4, h5 {
   font-family: 'Montserrat', sans-serif !important;
   color: #2e2c7d !important; 
 }
 
-/* Başlık boyutları taşmayı önlemek için optimize edildi */
 h1 { font-weight: 800 !important; font-size: 2.2rem !important; line-height: 1.2; margin-bottom: 0.2rem; }
 h3 { font-weight: 700 !important; font-size: 1.2rem !important; }
 p, li { font-weight: 500; line-height: 1.5; color: #333; }
 
-/* Özel Vurgu Renkleri */
 .text-red { color: #b32238 !important; }
 .text-blue { color: #2e2c7d !important; }
 .bg-red { background-color: #b32238 !important; color: white; }
 .bg-blue { background-color: #2e2c7d !important; color: white; }
 
-/* Şık Kart Tasarımı - Footer'a çarpmaması için daraltıldı */
 .card {
   background: #FFFFFF;
   border: 1px solid rgba(46, 44, 125, 0.1);
@@ -57,7 +52,6 @@ p, li { font-weight: 500; line-height: 1.5; color: #333; }
   font-size: 0.85rem;
 }
 
-/* Tablo Stilleri */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -68,7 +62,6 @@ th { background-color: #2e2c7d; color: white; padding: 6px; text-align: left; }
 td { padding: 6px; border-bottom: 1px solid #ddd; }
 tr:nth-child(even) { background-color: #f9f9fc; }
 
-/* Footer Metni - Daha küçültüldü ve aşağı çekildi */
 .footer-text {
   position: absolute;
   bottom: 56px;
@@ -84,17 +77,23 @@ tr:nth-child(even) { background-color: #f9f9fc; }
 }
 </style>
 
-<!-- KAPAK SAYFASI -->
-<div class="mt-10">
-  <h1 style="font-size: 3.2rem !important; line-height: 1.1;">Mobil Uygulama Testlerinde <br> Modern Yaklaşımlar</h1>
-  <div class="mt-4 mb-4 h-1.5 w-32 bg-red rounded-full"></div>
-  <p class="text-lg font-bold text-blue tracking-wide">
-    Cihaz Fragmantasyonundan Mağaza Onay <br> Süreçlerine Uçtan Uca Kalite Güvencesi
+<div class="mt-8">
+  <!-- ŞIK GRUP 7 ETİKETİ -->
+  <div class="inline-block px-3 py-1 mb-4 bg-[#eef1ff] border border-[#2e2c7d] text-blue text-[0.75rem] font-bold tracking-widest uppercase rounded shadow-sm">
+    Grup 7 Sunumu
+  </div>
+
+  <h1 style="font-size: 3.5rem !important; line-height: 1.1; margin-bottom: 0;">Mobil Uygulama Testleri</h1>
+  
+  <div class="mt-5 mb-5 h-1.5 w-32 bg-red rounded-full shadow-sm"></div>
+
+  <p class="text-[1.15rem] font-bold text-blue tracking-wide">
+    Modern Yaklaşımlar, Cihaz Fragmantasyonu <br> ve Uçtan Uca Kalite Güvencesi
   </p>
 </div>
 
 <div class="footer-text">
-  <span>Sunan: [İsminiz]</span>
+  <span>Sunan: Grup 7 &nbsp;|&nbsp; Mobil Uygulama Testleri</span>
   <span>Yazılım Test Süreçleri Dersi</span>
 </div>
 
@@ -242,6 +241,7 @@ Test ortamı seçimi projenin bütçesini ve hızını doğrudan etkiler.
 
 <div class="footer-text">
   <span>Test Ortamları</span>
+  <span>Bölüm 1</span>
 </div>
 
 ---
@@ -251,17 +251,14 @@ layout: default
 # Emülatör vs Gerçek Cihaz (Canlı Hata Tespiti)
 
 <div class="grid grid-cols-2 gap-4 mt-2">
-  <!-- ANDROID EMÜLATÖR VİDEOSU (Hatayı gizleyen) -->
   <div class="card !p-3">
     <h4 class="text-blue font-bold text-[0.9rem] mb-2 text-center">💻 Emülatör Görünümü</h4>
     <div class="flex gap-3 h-[240px]">
-      <!-- Sol: Video (Dikey) -->
       <div class="w-1/2 bg-black rounded border border-[#ddd] overflow-hidden flex justify-center items-center">
         <video controls autoplay loop muted class="w-full h-full object-contain">
           <source src="/android-video.mp4" type="video/mp4">
         </video>
       </div>
-      <!-- Sağ: Açıklama -->
       <div class="w-1/2 flex flex-col justify-center">
         <p class="text-[0.65rem] leading-snug mt-1">Uygulama arayüzü, emülatörün mükemmel sanal piksellerinde <b>tamamen sorunsuz</b> çalışıyor gibi görünüyor.</p>
         <p class="text-[0.65rem] leading-snug mt-2 text-slate-500">Tüm butonlar hizalı ve UI test otomasyonu (Appium) bu ekranda <b>"TEST PASSED"</b> sonucu verir.</p>
@@ -269,17 +266,14 @@ layout: default
     </div>
   </div>
 
-  <!-- GERÇEK CİHAZ VİDEOSU (Hatayı gösteren) -->
   <div class="card !p-3" style="border-left-color: #b32238;">
     <h4 class="text-red font-bold text-[0.9rem] mb-2 text-center">📱 Gerçek Cihaz Görünümü</h4>
     <div class="flex gap-3 h-[240px]">
-      <!-- Sol: Video (Dikey) -->
       <div class="w-1/2 bg-black rounded border border-[#ddd] overflow-hidden flex justify-center items-center">
         <video controls autoplay loop muted class="w-full h-full object-contain">
-          <source src="/ios-video.mp4" type="video/mp4"> <!-- Videonun adını gerçek cihaz videosuna göre değiştirmeyi unutma -->
+          <source src="/ios-video.mp4" type="video/mp4"> 
         </video>
       </div>
-      <!-- Sağ: Açıklama -->
       <div class="w-1/2 flex flex-col justify-center">
         <p class="text-[0.65rem] leading-snug mt-1">Gerçek cihazın ekran çentiği (Notch) ve donanımsal kenar payları (Safe Area) nedeniyle <b>UI öğeleri üst üste biniyor.</b></p>
         <p class="text-[0.65rem] leading-snug mt-2 font-bold text-red">Çözüm:</p>
@@ -291,6 +285,7 @@ layout: default
 
 <div class="footer-text">
   <span>Emülatör vs Gerçek Cihaz</span>
+  <span>Bölüm 1</span>
 </div>
 ---
 layout: default
@@ -374,6 +369,7 @@ Mobil cihazlar "iletişim" aracıdır, testler buna göre yapılmalıdır.
 
 <div class="footer-text">
   <span>Kesinti Testleri</span>
+  <span>Bölüm 2</span>
 </div>
 
 ---
@@ -381,20 +377,38 @@ layout: default
 ---
 
 # Ağ ve Bağlantı Senaryoları
-Bağlantı her zaman sabit ve mükemmel değildir.
 
-<ul class="text-[0.85rem] space-y-3 mt-4">
-  <li><b>Bant Genişliği Geçişleri:</b> Kullanıcı asansöre bindiğinde 5G'den Edge'e düşen bağlantıda uygulama donuyor mu?</li>
-  <li><b>Ağ Değişimi (Handover):</b> Evden çıkarken Wi-Fi'dan hücresel veriye geçişte oturum (Session) kopuyor mu?</li>
-  <li><b>Çevrimdışı (Offline) Mod:</b> Uygulama internet yokken de temel işlevlerini yerine getirebilmeli.</li>
-</ul>
+<div class="grid grid-cols-12 gap-6 mt-2">
+  
+  <div class="col-span-3 flex flex-col items-center justify-center mt-2">
+    <div class="card !p-1.5 shadow-lg border-t-4 border-t-red-600 bg-white relative flex justify-center">
+      <img src="/network-error.png" class="max-h-[290px] w-auto object-contain rounded border border-[#eee]" alt="Network Hata Demosu">
+    </div>
+  </div>
 
-<div class="mt-6 card bg-[#fcfcfc]">
-  <p class="text-[0.85rem]"><b class="text-red">Mühendislik Çözümü:</b> Çevrimdışı yapılan işlemlerin, cihaz internete bağlandığı anda arka planda veritabanı ile otomatik senkronize edilmesinin test edilmesi.</p>
+
+  <div class="col-span-9 flex flex-col justify-center">
+    <ul class="text-[0.8rem] space-y-3 pr-2 mb-0">
+      <li class="leading-snug">
+        <b class="text-blue">Bant Genişliği Geçişleri:</b> Kullanıcı asansöre bindiğinde 5G'den Edge'e (zayıf internet) düşen bağlantıda uygulamanın donmaması (Timeout Handling) gerekir.
+      </li>
+      <li class="leading-snug">
+        <b class="text-blue">Ağ Değişimi (Handover):</b> Evden çıkarken Wi-Fi'dan hücresel veriye (Cellular) geçişte güvenlik oturumunun (Session) kopup kopmadığı test edilmelidir.
+      </li>
+      <li class="leading-snug">
+        <b class="text-red">Çevrimdışı (Offline) Mod Yönetimi:</b> Yandaki görsel, kendi geliştirdiğimiz Kargo uygulamasından bir örnektir. Uçak modunda API isteği atıldığında uygulama <b>çökmez (Crash olmaz).</b> Bunun yerine <i>DioException</i> hatası yakalanarak kullanıcıya Snackbar ile kontrollü bilgi verilir.
+      </li>
+    </ul>
+    <div class="mt-4 card bg-[#fcfcfc] !p-2.5">
+      <p class="text-[0.7rem] m-0 leading-snug"><b class="text-blue">Mühendislik Çözümü:</b> Çevrimdışı yapılan işlemlerin (örn. kargo teslimatı), cihaz internete bağlandığı anda arka planda veritabanı ile otomatik senkronize edilmesinin test edilmesi.</p>
+    </div>
+  </div>
+
 </div>
 
 <div class="footer-text">
   <span>Ağ ve Bağlantı</span>
+  <span>Bölüm 2</span>
 </div>
 
 ---
@@ -408,7 +422,6 @@ layout: default
 
 <div class="grid grid-cols-2 gap-6 mt-4">
 
-  <!-- Exploratory Card -->
   <div class="bg-white rounded-2xl shadow-md border border-gray-200 p-5">
     <h4 class="text-[#2e2c7d] font-bold text-[1rem] mb-3">
       Exploratory Testing (Keşifsel)
@@ -422,7 +435,6 @@ layout: default
     </ul>
   </div>
 
-  <!-- Monkey Card -->
   <div class="bg-white rounded-2xl shadow-md border border-gray-200 p-5">
     <h4 class="text-[#b4233c] font-bold text-[1rem] mb-3">
       Monkey Testing (Rastgelelik)
@@ -442,7 +454,8 @@ layout: default
 </div>
 
 <div class="footer-text">
-  Test Yaklaşımları
+  <span>Test Yaklaşımları</span>
+  <span>Bölüm 2</span>
 </div>
 
 ---
@@ -456,7 +469,6 @@ layout: default
 
 <div class="grid grid-cols-3 gap-4 mt-4">
 
-  <!-- Kart 1 -->
   <div class="bg-white rounded-xl shadow-md border border-gray-200 p-4 min-h-[180px] flex flex-col">
     <div class="w-10 h-10 rounded-full bg-[#eef1ff] text-[#2e2c7d] font-bold flex items-center justify-center mb-3">
       01
@@ -469,7 +481,6 @@ layout: default
     </p>
   </div>
 
-  <!-- Kart 2 -->
   <div class="bg-white rounded-xl shadow-md border border-gray-200 p-4 min-h-[180px] flex flex-col">
     <div class="w-10 h-10 rounded-full bg-[#eef1ff] text-[#2e2c7d] font-bold flex items-center justify-center mb-3">
       02
@@ -482,7 +493,6 @@ layout: default
     </p>
   </div>
 
-  <!-- Kart 3 -->
   <div class="bg-white rounded-xl shadow-md border border-gray-200 p-4 min-h-[180px] flex flex-col">
     <div class="w-10 h-10 rounded-full bg-[#eef1ff] text-[#2e2c7d] font-bold flex items-center justify-center mb-3">
       03
@@ -499,6 +509,44 @@ layout: default
 
 <div class="footer-text">
   <span>Performans</span>
+  <span>Bölüm 3</span>
+</div>
+
+---
+layout: default
+---
+
+# Bellek Performansı (Canlı Demo)
+<p class="text-[0.85rem] font-bold text-red -mt-2 mb-2">
+  Bir Memory Leak (Bellek Sızıntısı) olmadığını nasıl anlarız?
+</p>
+
+<div class="flex flex-row items-center justify-center gap-4 w-full">
+  
+  <!-- SOL: PROFILER VİDEOSU -->
+  <div class="card !p-1.5 shadow-xl border-t-4 border-t-red-600 bg-[#1E1E1E] relative w-[48%] h-[230px] flex justify-center items-center">
+    <video controls autoplay loop muted class="w-full h-full object-contain rounded">
+      <source src="/profiler.mp4" type="video/mp4"> 
+    </video>
+  </div>
+
+  <!-- SAĞ: AÇIKLAMA -->
+  <div class="bg-[#f9f9fc] p-3 rounded-lg border border-[#2e2c7d] w-[42%] shadow-sm">
+    <h4 class="text-[0.8rem] font-bold text-blue mb-2">
+      Flutter DevTools (Memory Profiler)
+    </h4>
+    <p class="text-[0.7rem] m-0 text-slate-700 leading-snug">
+      Kendi projemizi test ederken yakaladığımız bellek (Heap) tüketim grafiği.
+      Mor simgeler <b>Garbage Collector (Çöp Toplayıcı)</b> faaliyetlerini gösterir.
+      Alttaki çizginin stabil kalması (~40MB), uygulamamızda cihazı donduracak
+      bir <b>Memory Leak</b> olmadığını mühendislik verileriyle kanıtlıyor.
+    </p>
+  </div>
+
+</div>
+
+<div class="footer-text">
+  <span>Performans Demosu</span>
   <span>Bölüm 3</span>
 </div>
 
@@ -528,6 +576,7 @@ Taşınabilir cihazlar fiziksel ve dijital hırsızlığa açıktır.
 
 <div class="footer-text">
   <span>Güvenlik</span>
+  <span>Bölüm 3</span>
 </div>
 
 ---
@@ -551,18 +600,20 @@ Kodun hatasız olması, uygulamanın yayınlanacağı anlamına gelmez.
 
 <div class="footer-text">
   <span>Store Review</span>
+  <span>Bölüm 3</span>
 </div>
 
 ---
 layout: default
 ---
 
-# Lokalizasyon ve Uyumluluk
+<h1 style="font-size: 2.1rem !important; line-height: 1.1; margin-bottom: 0.5rem;">Lokalizasyon ve Uyumluluk <br><span style="font-size: 1.6rem; color: #b32238;">(i18n / L10n)</span></h1>
+
 <p class="text-[0.85rem] font-bold text-blue mb-2">Uygulama çalışıyor olabilir — ama doğru dilde ve formatta mı?</p>
 
 <div class="grid grid-cols-3 gap-4 mt-2">
   <div class="card p-3">
-    <h4 class="text-blue font-bold text-[0.8rem] mb-1">1. Karakter Seti</h4>
+    <h4 class="text-blue font-bold text-[0.85rem] mb-1">1. Karakter Seti</h4>
     <ul class="text-[0.7rem] space-y-1">
       <li>Türkçe özel karakterlerin (ş, ğ, ü) veritabanına doğru okunması.</li>
       <li>Arapça/İbranice (RTL) dillerde arayüzün ters dönmesi.</li>
@@ -570,7 +621,7 @@ layout: default
   </div>
   
   <div class="card p-3" style="border-left-color: #2e2c7d;">
-    <h4 class="text-red font-bold text-[0.8rem] mb-1">2. Format Farklılıkları</h4>
+    <h4 class="text-red font-bold text-[0.85rem] mb-1">2. Format Farklılıkları</h4>
     <ul class="text-[0.7rem] space-y-1">
       <li><b>Tarih:</b> 25.04.2026 (TR) vs 04/25/2026 (US).</li>
       <li><b>Para:</b> ₺1.250,99 vs $1,250.99</li>
@@ -579,42 +630,85 @@ layout: default
   </div>
 
   <div class="card p-3">
-    <h4 class="text-blue font-bold text-[0.8rem] mb-1">3. Ekran Uyumu</h4>
+    <h4 class="text-blue font-bold text-[0.85rem] mb-1">3. Ekran Uyumu</h4>
     <ul class="text-[0.7rem] space-y-1">
-      <li>Almanca gibi dillerde buton taşması.</li>
+      <li>Almanca gibi dillerde kelime/buton taşması.</li>
       <li>Sistem dilini değiştirerek <b>manuel test</b> zorunludur.</li>
     </ul>
   </div>
 </div>
 
-<div class="mt-3 highlight-box !border-l-[#f59e0b] !bg-[#fffbeb] p-2">
-  <p class="text-[0.75rem]"><b class="text-[#b45309]">Kalite Sorunu:</b> Hedef pazarda yerelleştirilmemiş bir uygulama kullanıcı kaybeder.</p>
+<div class="mt-4 highlight-box !border-l-[#f59e0b] !bg-[#fffbeb] p-2">
+  <p class="text-[0.75rem]"><b class="text-[#b45309]">Kalite Sorunu:</b> Hedef pazarda yerelleştirilmemiş bir uygulama kullanıcı kaybeder. Bu bir kalite güvencesi sorunudur.</p>
 </div>
 
 <div class="footer-text">
   <span>Lokalizasyon</span>
+  <span>Bölüm 3</span>
 </div>
 
 ---
 layout: default
 ---
 
-# Vaka Analizleri
-Gerçek dünya projelerindeki zorluklar.
+# L10n Hatası (Canlı Demo)
 
 <div class="grid grid-cols-2 gap-8 mt-4">
-  <div>
-    <h4 class="text-blue font-bold mb-1">Senaryo 1: Belediye Uygulaması</h4>
-    <p class="text-[0.85rem]"><b>Durum:</b> E-devlet entegrasyonu barındıran hizmet uygulaması.</p>
-    <p class="text-[0.85rem] mt-2"><b>Zorluk:</b> Apple inceleme ekibinin (Amerika) Türkiye sistemine girememesi. Özel hesaplar ve Demo Video ile aşıldı.</p>
+  <div class="card !p-3 flex gap-3 items-center">
+    <div class="w-[35%]">
+      <img src="/tr-app.png" class="rounded-lg shadow-md border border-[#eee]" alt="Türkçe Başarılı">
+    </div>
+    <div class="w-[65%]">
+      <h4 class="text-blue font-bold text-[0.85rem] mb-1">Orijinal (TR) Görünüm</h4>
+      <p class="text-[0.7rem] text-slate-700 leading-snug mt-2">Uygulama kendi orijinal dilinde (Türkçe) geliştirildiğinde tüm butonlar, metinler ve UI bileşenleri ekrana kusursuz şekilde oturur.</p>
+    </div>
   </div>
 
-  <div class="card" style="border-left-color: #b32238;">
-    <h4 class="text-red font-bold mb-1">Senaryo 2: Kargo Takip</h4>
-    <p class="text-[0.85rem]"><b>Durum:</b> Kuryenin konumunu ileten uygulama.</p>
-    <p class="text-[0.85rem] mt-2"><b>Zorluk:</b> Kurye ekranı kilitlediğinde uygulamanın uyku moduna geçerek GPS'i kapatması.</p>
-    <p class="text-[0.85rem] mt-2"><b>Çözüm:</b> "Foreground Service" yaşam döngüsü optimize edildi.</p>
+  <div class="card !p-3 flex gap-3 items-center" style="border-left-color: #b32238;">
+    <div class="w-[35%] relative">
+      <img src="/en-app-error.png" class="rounded-lg shadow-md border-2 border-red-500" alt="İngilizce Hatalı">
+      <div class="absolute -top-2 -right-2 bg-red text-white text-[0.5rem] font-bold px-1.5 py-0.5 rounded shadow animate-pulse">
+        HATA!
+      </div>
+    </div>
+    <div class="w-[65%]">
+      <h4 class="text-red font-bold text-[0.85rem] mb-1">Çeviri Atlaması (Bug)</h4>
+      <p class="text-[0.7rem] text-slate-700 leading-snug mt-1">Dil paketi (JSON/ARB) güncellenmediği için framework ilgili çeviriyi bulamaz.</p>
+      <div class="mt-2 bg-[#fbebeb] border border-[#f5c6c6] p-1.5 rounded text-[0.55rem] font-mono text-red">
+        RIGHT OVERFLOWED BY 98 PIXELS
+      </div>
+      <p class="text-[0.65rem] text-slate-500 mt-1">Sığmayan bileşenler UI Crash'e neden olur.</p>
+    </div>
   </div>
+</div>
+
+<div class="footer-text">
+  <span>Lokalizasyon Demosu</span>
+  <span>Bölüm 3</span>
+</div>
+
+---
+layout: two-cols
+---
+
+# Vaka Analizleri
+
+<div class="mt-4 pr-4">
+  <h4 class="text-blue font-bold mb-1">Senaryo 1: Belediye Uygulaması</h4>
+  <p class="text-[0.85rem]"><b>Durum:</b> Bir devlet kurumu (belediye) için hazırlanan e-hizmet uygulamasının mağaza yayın süreci.</p>
+  
+  <p class="text-[0.85rem] mt-2"><b>Zorluk:</b> Apple'ın katı <i>Store Review</i> politikaları gereği, uygulamanın şahıs hesabı yerine doğrudan <b>Belediyenin resmi Kurumsal Apple Developer Hesabı (D-U-N-S Numaralı)</b> üzerinden yayınlanmasını şart koşması.</p>
+  
+  <p class="text-[0.85rem] mt-2"><b>Çözüm:</b> Belediyenin resmi onay belgeleri (Authorization Letter) İngilizceye çevrildi, kurumsal hesap doğrulama süreçleri yönetildi ve Apple test ekibine özel Demo hesapları sağlanarak bürokratik engel aşıldı.</p>
+</div>
+
+::right::
+
+<div class="ml-4 mt-14 card">
+  <h4 class="text-red font-bold mb-1">Senaryo 2: Kargo Takip</h4>
+  <p class="text-[0.85rem]"><b>Durum:</b> Kuryenin konumunu merkeze ileten lojistik uygulaması.</p>
+  <p class="text-[0.85rem] mt-2"><b>Zorluk:</b> Kurye ekranı kilitlediğinde uygulamanın uyku moduna geçerek (Doze Mode) GPS'i kapatması ve veri kaybı.</p>
+  <p class="text-[0.85rem] mt-2"><b>Çözüm:</b> "Foreground Service" yaşam döngüsü ve batarya optimizasyonu testleri yapılarak sorun çözüldü.</p>
 </div>
 
 <div class="footer-text">
@@ -631,7 +725,6 @@ layout: default
 
 <div class="grid grid-cols-2 gap-6">
 
-  <!-- SOL TARAF - KOD -->
   <div class="h-[290px] flex flex-col">
     <div class="bg-[#2D2D2D] text-[#ccc] px-3 py-1 text-[0.6rem] font-mono border border-[#404040] flex gap-2 items-center rounded-t-lg">
        <div class="w-2 h-2 rounded-full bg-[#ff5f56]"></div>
@@ -644,20 +737,16 @@ layout: default
 from appium import webdriver
 
 def test_login(driver):
-    # Elementleri Bul
     user = driver.find_element_by_id("usr")
     btn = driver.find_element_by_id("btn")
 
-    # Aksiyon
     user.send_keys("admin")
     btn.click()
 
-    # Doğrula
     assert driver.find_element_by_id("ok")
 ```
   </div>
 
-  <!-- SAĞ TARAF - TERMİNAL -->
 <div class="bg-black text-[0.58rem] font-mono flex flex-col border border-[#333] shadow-lg rounded-lg overflow-hidden h-[290px]">
   
   <div class="bg-[#1a1a1a] text-[#aaa] px-2.5 py-1 flex justify-between items-center">
@@ -684,6 +773,7 @@ def test_login(driver):
 
 <div class="footer-text">
   <span>Canlı Demo</span>
+  <span>Bölüm 4</span>
 </div>
 
 ---
@@ -705,6 +795,7 @@ Gerçek cihaz testlerini ofisten buluta taşıyan mimari.
 
 <div class="footer-text">
   <span>Device Farms</span>
+  <span>Bölüm 4</span>
 </div>
 
 ---
@@ -760,6 +851,7 @@ layout: default
 
 <div class="footer-text">
   <span>Raporlama</span>
+  <span>Bölüm 4</span>
 </div>
 
 
@@ -806,6 +898,7 @@ graph LR
 
 <div class="footer-text">
   <span>CI/CD</span>
+  <span>Bölüm 4</span>
 </div>
 
 ---
@@ -824,6 +917,7 @@ Akademik ve Endüstriyel Kaynaklar:
 
 <div class="footer-text">
   <span>Referanslar</span>
+  <span>Bölüm 4</span>
 </div>
 
 
@@ -837,7 +931,6 @@ class: text-center
   
   <p class="text-[1.2rem] font-bold text-red mb-8">Sorularınız & Tartışma</p>
 
-  <!-- ŞIK PDF İNDİRME BUTONU -->
   <div class="z-10 relative">
     <a href="sunum.pdf" download="Mobil_Test_Sunumu.pdf" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue text-white font-bold shadow-lg hover:bg-opacity-90 transition-all cursor-pointer no-underline border-b-4 text-sm" style="border-color: #1a1854;">
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M12 16l-5-5h3V4h4v7h3l-5 5zm9-4v9H3v-9h2v7h14v-7h2z"/></svg>

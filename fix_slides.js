@@ -24,7 +24,6 @@ for (let rep of replacements) {
   content = content.replace(rep.search, rep.replace);
 }
 
-// Add linebreaks before HTML tags block components that got smushed together
 content = content.replace(/<\/div><div/g, '</div>\n\n<div');
 content = content.replace(/<\/div><p/g, '</div>\n\n<p');
 content = content.replace(/<\/p><div/g, '</p>\n\n<div');

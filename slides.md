@@ -78,7 +78,6 @@ tr:nth-child(even) { background-color: #f9f9fc; }
 </style>
 
 <div class="mt-8">
-  <!-- ŞIK GRUP 7 ETİKETİ -->
   <div class="inline-block px-3 py-1 mb-4 bg-[#eef1ff] border border-[#2e2c7d] text-blue text-[0.75rem] font-bold tracking-widest uppercase rounded shadow-sm">
     Grup 7 Sunumu
   </div>
@@ -523,14 +522,12 @@ layout: default
 
 <div class="flex flex-row items-center justify-center gap-4 w-full">
   
-  <!-- SOL: PROFILER VİDEOSU -->
   <div class="card !p-1.5 shadow-xl border-t-4 border-t-red-600 bg-[#1E1E1E] relative w-[48%] h-[230px] flex justify-center items-center">
     <video controls autoplay loop muted class="w-full h-full object-contain rounded">
       <source src="/profiler.mp4" type="video/mp4"> 
     </video>
   </div>
 
-  <!-- SAĞ: AÇIKLAMA -->
   <div class="bg-[#f9f9fc] p-3 rounded-lg border border-[#2e2c7d] w-[42%] shadow-sm">
     <h4 class="text-[0.8rem] font-bold text-blue mb-2">
       Flutter DevTools (Memory Profiler)
@@ -821,26 +818,30 @@ layout: default
 </div>
 
 <table class="mt-4 w-full">
-  <tr>
-    <th class="!py-1.5 !px-2 text-[0.75rem]">Araç</th>
-    <th class="!py-1.5 !px-2 text-[0.75rem]">Ne İşe Yarar</th>
-  </tr>
-  <tr>
-    <td class="!py-1.5 !px-2 text-[0.75rem]"><b>Firebase Crashlytics</b></td>
-    <td class="!py-1.5 !px-2 text-[0.75rem]">Gerçek kullanıcı crash'lerini anlık raporlar.</td>
-  </tr>
-  <tr>
-    <td class="!py-1.5 !px-2 text-[0.75rem]"><b>Sentry</b></td>
-    <td class="!py-1.5 !px-2 text-[0.75rem]">Hem hata hem performans izleme, stack trace verir.</td>
-  </tr>
-  <tr>
-    <td class="!py-1.5 !px-2 text-[0.75rem]"><b>Allure Report</b></td>
-    <td class="!py-1.5 !px-2 text-[0.75rem]">Appium sonuçlarını görsel rapora dönüştürür.</td>
-  </tr>
-  <tr>
-    <td class="!py-1.5 !px-2 text-[0.75rem]"><b>Android Vitals</b></td>
-    <td class="!py-1.5 !px-2 text-[0.75rem]">Play Console içinde ANR ve crash dashboard'u.</td>
-  </tr>
+  <thead>
+    <tr>
+      <th class="!py-1.5 !px-2 text-[0.75rem]">Araç</th>
+      <th class="!py-1.5 !px-2 text-[0.75rem]">Ne İşe Yarar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="!py-1.5 !px-2 text-[0.75rem]"><b>Firebase Crashlytics</b></td>
+      <td class="!py-1.5 !px-2 text-[0.75rem]">Gerçek kullanıcı crash'lerini anlık raporlar.</td>
+    </tr>
+    <tr>
+      <td class="!py-1.5 !px-2 text-[0.75rem]"><b>Sentry</b></td>
+      <td class="!py-1.5 !px-2 text-[0.75rem]">Hem hata hem performans izleme, stack trace verir.</td>
+    </tr>
+    <tr>
+      <td class="!py-1.5 !px-2 text-[0.75rem]"><b>Allure Report</b></td>
+      <td class="!py-1.5 !px-2 text-[0.75rem]">Appium sonuçlarını görsel rapora dönüştürür.</td>
+    </tr>
+    <tr>
+      <td class="!py-1.5 !px-2 text-[0.75rem]"><b>Android Vitals</b></td>
+      <td class="!py-1.5 !px-2 text-[0.75rem]">Play Console içinde ANR ve crash dashboard'u.</td>
+    </tr>
+  </tbody>
 </table>
 
 <div class="mt-3 highlight-box !py-2 !px-3">
@@ -943,4 +944,5 @@ class: text-center
 
 <div class="footer-text">
   <span>Bitiş</span>
+  <span>Sunan: Grup 7 &nbsp;|&nbsp; Mobil Uygulama Testleri</span>
 </div>

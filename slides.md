@@ -148,9 +148,8 @@ layout: default
 ---
 
 # Mobil Ekosistemin Doğası
-<p class="text-sm text-red font-bold mb-4">Grup 6: Yazılım Karmaşıklığı'na Atıfla</p>
 
-<div class="grid grid-cols-2 gap-8">
+<div class="grid grid-cols-2 gap-8 mt-24">
   <div>
     <p class="text-[0.85rem] mb-4">Mobil cihazlar, donanıma sıkı sıkıya bağlı bir entropi yaratır.</p>
     <ul class="text-[0.8rem] space-y-2 pr-2">
@@ -216,7 +215,7 @@ layout: default
 # Gerçek Cihaz mı, Emülatör mü?
 Test ortamı seçimi projenin bütçesini ve hızını doğrudan etkiler.
 
-<div class="grid grid-cols-2 gap-6 mt-4">
+<div class="grid grid-cols-2 gap-6 mt-12">
   <div class="card">
     <h3 class="text-lg mb-2">💻 Emülatör / Simülatör</h3>
     <ul class="text-[0.8rem] space-y-2">
@@ -375,11 +374,11 @@ layout: default
 # Kesinti (Interrupt) Testleri
 Mobil cihazlar "iletişim" aracıdır, testler buna göre yapılmalıdır.
 
-<div class="mt-2 highlight-box">
+<div class="!mt-12 highlight-box">
   <p class="text-[0.85rem]">Bir kullanıcı kritik bir işlem yaparken dışarıdan gelen bir kesintinin uygulamayı çökertmemesi gerekir.</p>
 </div>
   
-<div class="grid grid-cols-2 gap-6 mt-4">
+<div class="grid grid-cols-2 gap-6 mt-2">
   <div class="card">
     <h4 class="text-blue font-bold">Yaygın Kesintiler</h4>
     <ul class="text-[0.8rem] mt-2 space-y-1">
@@ -451,7 +450,7 @@ layout: default
   Senaryosuz testin gücü: Otomasyonun göremediğini insan bulur.
 </p>
 
-<div class="grid grid-cols-2 gap-6 mt-4">
+<div class="grid grid-cols-2 gap-6 mt-9">
 
   <div class="bg-white rounded-2xl shadow-md border border-gray-200 p-5">
     <h4 class="text-[#2e2c7d] font-bold text-[1rem] mb-3">
@@ -498,7 +497,7 @@ layout: default
   Uygulamanın çalışması yetmez, cihazı yormamalıdır.
 </p>
 
-<div class="grid grid-cols-3 gap-4 mt-4">
+<div class="grid grid-cols-3 gap-4 mt-12">
 
   <div class="bg-white rounded-xl shadow-md border border-gray-200 p-4 min-h-[180px] flex flex-col">
     <div class="w-10 h-10 rounded-full bg-[#eef1ff] text-[#2e2c7d] font-bold flex items-center justify-center mb-3">
@@ -552,7 +551,7 @@ layout: default
   Bir Memory Leak (Bellek Sızıntısı) olmadığını nasıl anlarız?
 </p>
 
-<div class="flex flex-row items-center justify-center gap-4 w-full">
+<div class="flex flex-row items-center justify-center gap-8 w-full mt-12">
   
   <div class="card !p-1.5 shadow-xl border-t-4 border-t-red-600 bg-[#1E1E1E] relative w-[48%] h-[230px] flex justify-center items-center">
     <video controls autoplay loop muted class="w-full h-full object-contain rounded">
@@ -586,7 +585,7 @@ layout: default
 # Güvenlik Testleri
 Taşınabilir cihazlar fiziksel ve dijital hırsızlığa açıktır.
 
-<div class="grid grid-cols-2 gap-6 mt-4">
+<div class="grid grid-cols-2 gap-6 mt-6">
   <div class="card">
     <h4 class="text-red font-bold border-b border-[#eee] pb-1 mb-2">Veri Depolama</h4>
     <p class="text-[0.8rem]">Hassas veriler asla düz metin kaydedilmemeli. iOS'te <b>Keychain</b>, Android'de <b>Encrypted SharedPreferences</b> kullanılmalı.</p>
@@ -615,7 +614,7 @@ layout: default
 # Mağaza İnceleme (Store Review) Süreçleri
 Kodun hatasız olması, uygulamanın yayınlanacağı anlamına gelmez.
 
-<ul class="text-[0.85rem] space-y-3 mt-4">
+<ul class="text-[0.85rem] space-y-3 mt-12">
   <li><b>Apple ve Google Kriterleri:</b> Mağazaların katı tasarım (Human Interface), gizlilik ve veri kurallarına uyumluluk kontrolü.</li>
   <li><b>Yasal ve Teknik Belgeler:</b> Özellikle finans veya devlet uygulamalarında, mağazaya uygulamanın resmi bir kuruma ait olduğunu kanıtlayan <b>"Authorization Letter" (Yetki Belgesi)</b> sunulması zorunluluğu.</li>
   <li><b>Yaygın Red (Reject) Sebepleri:</b>
@@ -640,7 +639,7 @@ layout: default
 
 <p class="text-[0.85rem] font-bold text-blue mb-2">Uygulama çalışıyor olabilir — ama doğru dilde ve formatta mı?</p>
 
-<div class="grid grid-cols-3 gap-4 mt-2">
+<div class="grid grid-cols-3 gap-4 mt-8">
   <div class="card p-3">
     <h4 class="text-blue font-bold text-[0.85rem] mb-1">1. Karakter Seti</h4>
     <ul class="text-[0.7rem] space-y-1">
@@ -812,7 +811,7 @@ layout: default
 # Bulut Cihaz Çiftlikleri (Device Farms)
 Gerçek cihaz testlerini ofisten buluta taşıyan mimari.
 
-<div class="mt-4 bg-[#f9f9fc] p-4 border border-[#e6e6e6] rounded">
+<div class="mt-12 bg-[#f9f9fc] p-4 border border-[#e6e6e6] rounded">
   <p class="text-[0.85rem] mb-4">Kendi ofisinizde yüzlerce telefonu barındırmak yerine, kiralama modeliyle AWS veya Google veri merkezlerindeki gerçek telefonlara bağlanma sistemidir.</p>
   
   <ul class="text-[0.8rem] space-y-2 list-disc ml-4">
@@ -896,7 +895,7 @@ layout: default
 # Sürekli Entegrasyon (CI/CD)
 <p class="text-[0.85rem] font-bold text-red -mt-2 mb-4">Kodun yazımından mağazaya gidişine kadarki üretim bandı.</p>
 
-<div class="mt-2 py-4 bg-white border border-[#eee] rounded-xl shadow-sm flex justify-center items-center overflow-hidden">
+<div class="mt-10 py-4 bg-white border border-[#eee] rounded-xl shadow-sm flex justify-center items-center overflow-hidden">
 
 ```mermaid {scale: 0.65}
 graph LR
@@ -923,7 +922,7 @@ graph LR
 
 </div>
 
-<div class="mt-6 highlight-box !border-l-[#2e2c7d] p-3 text-center mx-auto w-[90%]">
+<div class="mt-6 highlight-box !border-l-[#2e2c7d] p-3 text-center mx-auto w-[100%]">
   <p class="text-[0.85rem] m-0 leading-relaxed text-[#333]">
     Her <b class="text-blue">"Commit"</b> sonrası insan eli değmeden otomatik testlerin koşturulması ve test ekibine <b class="text-red">Beta dağıtım</b> yapılması sürecin kalbidir.
   </p>

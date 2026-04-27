@@ -177,20 +177,32 @@ layout: default
 # Test Piramidi ve Mobil Uygulamalar
 Modern mobil mimaride testlerin katmanlı yapısı.
 
-<div class="grid grid-cols-2 gap-8 mt-6 items-center">
-  <div>
-
-```mermaid
-graph TD
-  A[Uçtan Uca / E2E] --> B[Widget / Component]
-  B --> C[Birim / Unit Tests]
-  style A fill:#e6e6f2,stroke:#2e2c7d,color:#2e2c7d
-  style B fill:#f0f0f5,stroke:#2e2c7d,color:#2e2c7d
-  style C fill:#fafafa,stroke:#2e2c7d,color:#2e2c7d
-```
+<div class="grid grid-cols-12 gap-6 items-center mt-16">
+  
+  <div class="col-span-5 flex items-stretch justify-center h-[180px]">
+    <div class="flex flex-col items-center justify-between h-full pt-1 pb-2">
+      <span class="text-[0.55rem] font-bold text-[#b32238] leading-tight text-center">Yavaş &<br>Pahalı</span>
+      <div class="w-1.5 flex-1 bg-gradient-to-t from-[#2ea043] via-[#ffbd2e] to-[#b32238] rounded-full relative my-1.5 flex justify-center">
+        <div class="absolute -top-1 w-0 h-0 border-l-[4px] border-r-[4px] border-b-[6px] border-transparent border-b-[#b32238]"></div>
+      </div>
+      <span class="text-[0.55rem] font-bold text-[#2ea043] leading-tight text-center">Hızlı &<br>Ucuz</span>
+    </div>
+    <div class="flex flex-col items-center justify-center space-y-1 flex-1">
+      <div class="w-[35%] bg-[#e6e6f2] border-2 border-[#2e2c7d] text-center py-2 shadow-sm relative">
+        <span class="text-[#2e2c7d] font-bold text-[0.7rem]">Uçtan Uca (E2E)</span>
+        <div class="absolute top-8 left-1/2 transform -translate-x-1/2 text-[#2e2c7d] text-[0.6rem]">▲</div>
+      </div>
+      <div class="w-[55%] bg-[#f0f0f5] border-2 border-[#2e2c7d] text-center py-2 shadow-sm relative mt-3">
+        <span class="text-[#2e2c7d] font-bold text-[0.7rem]">Widget / Component</span>
+        <div class="absolute top-8 left-1/2 transform -translate-x-1/2 text-[#2e2c7d] text-[0.6rem]">▲</div>
+      </div>
+      <div class="w-[80%] bg-[#fafafa] border-2 border-[#2e2c7d] text-center py-2 shadow-sm mt-3">
+        <span class="text-[#2e2c7d] font-bold text-[0.7rem]">Birim / Unit Tests</span>
+      </div>
+    </div>
 
   </div>
-  <div class="space-y-3">
+  <div class="col-span-7 space-y-4">
     <div class="highlight-box">
       <b class="text-blue">Birim Testler (Unit):</b> İş mantığının ve API isteklerinin dışa bağımlı olmadan doğrulanması.
     </div>
@@ -492,6 +504,42 @@ layout: default
 layout: default
 ---
 
+# Monkey Testing (Canlı Uygulama)
+<p class="text-[0.85rem] font-bold text-red -mt-2 mb-4">Kaos mühendisliği ile uygulamanın stres testi ve kararlılık analizi.</p>
+
+<div class="grid grid-cols-4 gap-8 items-start">
+  
+  <div class="col-span-1 flex flex-col items-center mt-3 justify-center">
+    <div class="card !p-1.5 shadow-xl border-t-4 border-t-red-600 bg-[#1E1E1E] relative w-full flex justify-center h-[280px]">
+      <video controls autoplay loop muted class="w-full h-full object-contain rounded opacity-95">
+        <source src="/monkey.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="col-span-3 space-y-4">
+    <div class="card !border-l-[#2e2c7d] !p-3">
+      <h4 class="text-blue font-bold text-[0.85rem] mb-1">Mühendislik Çıktıları:</h4>
+      <ul class="text-[0.75rem] space-y-2 mt-2">
+        <li><b>Crash ve ANR Direnci:</b> Aşırı yüklenmeye ve ardışık rastgele girdilere rağmen uygulama hiçbir <i>Fatal Exception (Çökme)</i> veya <i>ANR (Application Not Responding)</i> hatası vermedi.</li>
+        <li><b>Lifecycle (Yaşam Döngüsü) Kararlılığı:</b> Test sırasında uygulamanın arka plana atılması (ana ekrana düşme, sistem arayüzünün tetiklenmesi) ve tekrar öne alınması durumunda <i>State (Durum)</i> kaybı yaşanmadığı görüldü.</li>
+        <li><b>Asenkron İşlem Yönetimi:</b> Üst üste tetiklenen sayfa geçişleri ve yükleme (loading spinner) animasyonları çakışmadı; bitmemiş ağ istekleri UI'ı kilitlemedi.</li>
+        <li><b>Navigation & Component Stresi:</b> Bottom sheet'lerin (Yeni Kargo Oluştur), tab geçişlerinin ve form elemanlarının (checkbox/toggle) olağandışı hızda tetiklenmesi <i>Routing</i> yapısını bozmadı.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer-text">
+  <span>Monkey Testing Demo</span>
+  <span>Bölüm 2</span>
+</div>
+
+---
+layout: default
+---
+
 # Performans ve Kaynak Tüketimi
 <p class="text-[0.95rem] text-gray-500 font-medium mb-5">
   Uygulamanın çalışması yetmez, cihazı yormamalıdır.
@@ -539,42 +587,6 @@ layout: default
 
 <div class="footer-text">
   <span>Performans</span>
-  <span>Bölüm 3</span>
-</div>
-
----
-layout: default
----
-
-# Bellek Performansı (Canlı Demo)
-<p class="text-[0.85rem] font-bold text-red -mt-2 mb-2">
-  Bir Memory Leak (Bellek Sızıntısı) olmadığını nasıl anlarız?
-</p>
-
-<div class="flex flex-row items-center justify-center gap-8 w-full mt-12">
-  
-  <div class="card !p-1.5 shadow-xl border-t-4 border-t-red-600 bg-[#1E1E1E] relative w-[48%] h-[230px] flex justify-center items-center">
-    <video controls autoplay loop muted class="w-full h-full object-contain rounded">
-      <source src="/profiler.mp4" type="video/mp4"> 
-    </video>
-  </div>
-
-  <div class="bg-[#f9f9fc] p-3 rounded-lg border border-[#2e2c7d] w-[42%] shadow-sm">
-    <h4 class="text-[0.8rem] font-bold text-blue mb-2">
-      Flutter DevTools (Memory Profiler)
-    </h4>
-    <p class="text-[0.7rem] m-0 text-slate-700 leading-snug">
-      Kendi projemizi test ederken yakaladığımız bellek (Heap) tüketim grafiği.
-      Mor simgeler <b>Garbage Collector (Çöp Toplayıcı)</b> faaliyetlerini gösterir.
-      Alttaki çizginin stabil kalması (~40MB), uygulamamızda cihazı donduracak
-      bir <b>Memory Leak</b> olmadığını mühendislik verileriyle kanıtlıyor.
-    </p>
-  </div>
-
-</div>
-
-<div class="footer-text">
-  <span>Performans Demosu</span>
   <span>Bölüm 3</span>
 </div>
 

@@ -332,12 +332,12 @@ stateDiagram-v2
 <div class="-mt-4">
   <p class="text-[0.7rem] font-bold text-red">Kullanıcıların Uygulamayı Silme (Uninstall) Nedenleri (Araştırma Verileri)</p>
   
-  <table class="w-full text-center !-mb-2 border-b border-[#ddd] -mt-2">
+  <table class="w-full !text-center !-mb-2 border-b border-[#ddd] -mt-2">
     <thead>
       <tr>
-        <th class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] text-center leading-none">Hata Türü</th>
-        <th class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] text-center leading-none">Uygulamayı Silme Oranı</th>
-        <th class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] text-center leading-none">Lifecycle İle İlgisi</th>
+        <th class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] text-center leading-none" style="text-align:center;">Hata Türü</th>
+        <th class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] text-center leading-none" style="text-align:center;">Uygulamayı Silme Oranı</th>
+        <th class="!pt-1 !pb-0.5 !px-2 text-[0.7rem] text-center leading-none" style="text-align:center;">Lifecycle İle İlgisi</th>
       </tr>
     </thead>
     <tbody>
